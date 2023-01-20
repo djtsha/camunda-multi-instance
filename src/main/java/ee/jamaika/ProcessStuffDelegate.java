@@ -12,9 +12,9 @@ import java.util.Random;
 public class ProcessStuffDelegate implements JavaDelegate {
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
-
-        int count = (Integer)delegateExecution.getVariable("loopCounter");
-        log.info("processing:{}|", count);
+        int count = (Integer) delegateExecution.getVariable("loopCounter");
+        int id = (Integer) delegateExecution.getVariable("id");
+        log.info("processing:{} id:{}", count, id);
 
 /*
         if (isRandomTrue()) {
